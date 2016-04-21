@@ -1,0 +1,28 @@
+.pseudo-elem{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    pointer-events: none;//禁用鼠标事件
+}
+.filter-base{
+    position: relative;
+
+    img{
+        width: 100%;
+        z-index:1;
+    }
+
+    &::before{
+        .pseudo-elem;
+        z-index: 2;
+    }
+
+    &::after{
+        .pseudo-elem;
+        z-index:3;
+    }
+}
