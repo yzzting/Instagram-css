@@ -2,6 +2,14 @@ body,
 section {
     overflow-x: hidden;
 }
+body{
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 1200px;
+    line-height: 1.5;
+    font-size: 1.1em
+}
 a,
 figure {
     transition-duration: 0.3s;
@@ -16,6 +24,12 @@ img {
 }
 .demo-inputArea {
     text-align: center;
+}
+.demo-inputArea{
+    font-size: 1em;
+    font-weight: 300;
+    margin: 1em auto;
+    padding: 1em 0;
 }
 ul {
     width: 100%;
@@ -53,6 +67,7 @@ figure{
     height: 150px;
     display: inline-block;
     cursor: pointer;
+    padding: 0 .3em;
 }
 img{
     margin: auto;
@@ -62,7 +77,26 @@ img{
     max-width: 100%;
 }
 .field{
-    color: rgba(226, 15, 211, 0.78);
-    border: 1px solid #rgb(238, 32, 119);
+    color: rgba(246,74,182,.66);
+    border: 1px solid rgba(142, 142, 142, 0.96);
     min-width: 200px;
 }
+.inputImg{
+    max-width: 16em;
+    font-size: 1em;
+    padding: .5em;
+    border: 2px solid rgba(246,74,182,.66);
+    outline: 0;
+    margin: .5em;
+    font-weight: 200;
+    transition-duration: .3s
+}
+// figcaption{
+//     position: absolute;
+//     bottom: 1em;
+//     right: 0;
+//     padding: .25em 1em .25em .25em;
+//     background: #000;
+//     color: #fff;
+//     font-weight: 200;
+// }
