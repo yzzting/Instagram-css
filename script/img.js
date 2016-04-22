@@ -17,10 +17,10 @@ document.addEventListener('click',function(event){
         pickSample(event.target)
     }
 },false)
-// inputField.addEventListener("input", function() {
-//     updatesrc(this.value)
-// }, false)
-// inputField.addEventListener("focus", function() {
-//     this.select()
-// }, false)
+inputField.addEventListener("input", function() {
+    updateSrc(this.value)
+}, false)
+inputField.addEventListener("focus", function() {
+    this.select()
+}, false)
 pickSample(document.querySelector(".demoImg"))
