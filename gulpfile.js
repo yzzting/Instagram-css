@@ -29,7 +29,7 @@ gulp.task('serve', function() {
 
 gulp.task('watch', ['less', 'jade'], function() {
     gulp.watch(['source/less/*.less'], ['less'])
-    gulp.watch(['source/less/Filter/*.less'],['less'])
+    gulp.watch(['source/less/Filter/*.less'], ['less'])
     gulp.watch(['templates/jade/index.jade'], ['jade'])
 })
 gulp.task('build', ['jade', 'less']);
