@@ -2,11 +2,11 @@ var gulp = require('gulp');
 var gls = require('gulp-live-server');
 var jade = require('gulp-jade');
 var less = require('gulp-less')
-var cssmin = require('gulp-minify-css');
+var cssmin = require('gulp-clean-css');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var server = gls.static('dist', 8000);
-
+var ghPages = require('gulp-gh-pages');
 gulp.task('less', function() {
     gulp.src(['source/less/main.less'])
         .pipe(less())

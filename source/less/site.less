@@ -2,19 +2,54 @@ body,
 section {
     overflow-x: hidden;
 }
-body{
+body {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0 auto;
     padding: 0 2em;
     max-width: 1200px;
     line-height: 1.5;
-    font-size: 1.1em
+    font-size: 1.1em;
 }
-a,
+ul {
+    width: 100%;
+    line-height: 1.8;
+}
+img {
+    margin: auto;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    color: rgba(250, 96, 193, 0.85);
+    transition-duration: 0.3s;
+    border-bottom: 1px solid rgb(26, 166, 99);
+    padding-bottom: 0.5em;
+}
+a:focus,
+a:hover {
+    color: #e398c1;
+    border-color: #e398c1;
+}
 figure {
+    max-width: 350px;
+    max-height: 350px;
+    overflow: hidden;
     transition-duration: 0.3s;
 }
-figure,li {
+figcaption {
+    position: absolute;
+    bottom: 1em;
+    right: 0;
+    padding: 0.25em 1em 0.25em 0.25em;
+    background: #000;
+    color: #fff;
+    font-weight: 200;
+}
+figure,
+li {
     margin: 0;
     padding: 0;
 }
@@ -25,78 +60,42 @@ img {
 .demo-inputArea {
     text-align: center;
 }
-.demo-inputArea{
+.demo-inputArea {
     font-size: 1em;
     font-weight: 300;
     margin: 1em auto;
     padding: 1em 0;
 }
-ul {
-    width: 100%;
-    line-height: 1.8;
-}
-a {
-    text-decoration: none;
-    color: rgba(250, 96, 193, 0.85);
-    transition-duration: 0.3s;
-    border-bottom: 1px solid rgb(26, 166, 99);
-    padding-bottom: 0.5em;
-}
-a:focus,a:hover{
-    color: #e398c1;
-    border-color: #e398c1;
-}
-figure{
-    max-width: 350px;
-    max-height:350px;
-    overflow: hidden;
-    transition-duration: 0.3s;
-}
-.demoList{
+.demoList {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.demoItem{
+.demoItem {
     margin: 0.75em;
     list-style: none;
+    position: relative;
 }
-.demoImg{
+.demoImg {
     max-width: 150px;
     height: 150px;
     display: inline-block;
     cursor: pointer;
-    padding: 0 .3em;
+    padding: 0 0.3em;
 }
-img{
-    margin: auto;
-    height: auto;
-    max-height: 100%;
-    width: auto;
-    max-width: 100%;
-}
-.field{
+.field {
     color: rgba(246,74,182,.66);
     border: 1px solid rgba(142, 142, 142, 0.96);
     min-width: 200px;
 }
-.inputImg{
+.inputImg {
     max-width: 16em;
     font-size: 1em;
-    padding: .5em;
+    padding: 0.5em;
     border: 2px solid rgba(246,74,182,.66);
     outline: 0;
-    margin: .5em;
+    margin: 0.5em;
     font-weight: 200;
-    transition-duration: .3s
-}
-figcaption{
-    position: absolute;
-    bottom: 1em;
-    right: 0;
-    padding: .25em 1em .25em .25em;
-    background: #000;
-    color: #fff;
-    font-weight: 200;
+    transition-duration: 0.3s;
 }

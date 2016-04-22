@@ -1,4 +1,4 @@
-.pseudo-elem{
+.pseudo-elem(){
     content: '';
     display: block;
     height: 100%;
@@ -8,7 +8,7 @@
     position: absolute;
     pointer-events: none;//禁用鼠标事件
 }
-.filter-base{
+.filter-base(){
     position: relative;
 
     img{
@@ -16,13 +16,13 @@
         z-index:1;
     }
 
-    &::before{
-        .pseudo-elem;
+    &:before{
+        .pseudo-elem();
         z-index: 2;
     }
 
-    &::after{
-        .pseudo-elem;
-        z-index:3;
+    &:after{
+        .pseudo-elem();
+        z-index: 3;
     }
 }
