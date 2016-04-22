@@ -13,6 +13,8 @@ body {
 ul {
     width: 100%;
     line-height: 1.8;
+    margin: 0;
+    padding: 0;
 }
 img {
     margin: auto;
@@ -52,6 +54,16 @@ figure,
 li {
     margin: 0;
     padding: 0;
+}
+figure &:focus,
+figure &:hover {
+    filter: none!important;
+}
+figure:focus::after,
+figure:focus::before,
+figure:hover::after,
+figure:hover::before {
+    opacity: 0!important;
 }
 .demo-inputArea,
 img {
