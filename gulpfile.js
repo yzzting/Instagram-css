@@ -7,6 +7,16 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var server = gls.static('dist', 8000);
 var ghPages = require('gulp-gh-pages');
+var imagemin = require('gulp-imagemin')
+
+// 压缩图片任务
+gulp.task('images', function() {
+    gulp.src('source/img/*.*')
+        .pipe(imagemin({
+            progressive: true
+        }))
+        .pipe(gulp.dest('dist/img'))
+});
 gulp.task('less', function() {
     gulp.src(['source/less/main.less'])
         .pipe(less())
@@ -27,12 +37,13 @@ gulp.task('serve', function() {
     server.start();
 });
 
-gulp.task('watch', ['less', 'jade'], function() {
+gulp.task('watch', ['less', 'jade','images'], function() {
     gulp.watch(['source/less/*.less'], ['less'])
     gulp.watch(['source/less/Filter/*.less'], ['less'])
     gulp.watch(['templates/jade/index.jade'], ['jade'])
+    gulp.watch(['source/img/*.*'],['images'])
 })
-gulp.task('build', ['jade', 'less']);
+gulp.task('build', ['jade', 'less','images']);
 
 gulp.task('server', ['build', 'serve']);
 

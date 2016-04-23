@@ -6,6 +6,7 @@
   "author": "yzz",
   "license": "ISC",
   "dependencies": {
+    "gulp-imagemin": "^2.4.0",
     "gulp-less": "^3.0.5"
   },
   "devDependencies": {

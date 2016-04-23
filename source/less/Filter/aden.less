@@ -4,7 +4,7 @@
 
 @import "share";
 
-.aden{
+.aden(){
     .filter-base;
     /**
      * hue-rotate色相旋转
@@ -17,7 +17,11 @@
     &:after{
         background: linear-gradient(to right,rgba(66,10,14,.2),transparent);
         //向右渐变，背景透明
-        min-blend-mode:darken;
+        mix-blend-mode:darken;
         //变暗模式
     }
+}
+
+.aden{
+    .aden;
 }

@@ -1,0 +1,23 @@
+/**
+ * moon
+ */
+@import "share";
+.toaster() {
+    .filter-base;
+    /**
+     * graycale灰度
+     * contrast对比度
+     * brightness亮度
+     */
+    filter: contrast(1.5) brightness(.9);
+
+    &::after {
+        background: radial-gradient(circle, rgb(128, 78, 15), rgb(59, 0, 59));
+        //从中心开始渐变
+        mix-blend-mode: screen;
+        // 背景色将作为源的补差色混合在一起
+    }
+}
+.toaster {
+    .toaster;
+}
