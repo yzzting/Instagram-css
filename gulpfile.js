@@ -37,13 +37,13 @@ gulp.task('serve', function() {
     server.start();
 });
 
-gulp.task('watch', ['less', 'jade','images'], function() {
+gulp.task('watch', ['less', 'jade', 'images'], function() {
     gulp.watch(['source/less/*.less'], ['less'])
     gulp.watch(['source/less/Filter/*.less'], ['less'])
     gulp.watch(['templates/jade/index.jade'], ['jade'])
-    gulp.watch(['source/img/*.*'],['images'])
+    gulp.watch(['source/img/*.*'], ['images'])
 })
-gulp.task('build', ['jade', 'less','images']);
+gulp.task('build', ['jade', 'less', 'images']);
 
 gulp.task('server', ['build', 'serve']);
 
