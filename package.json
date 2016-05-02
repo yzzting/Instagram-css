@@ -7,7 +7,8 @@
   "license": "ISC",
   "dependencies": {
     "gulp-imagemin": "^2.4.0",
-    "gulp-less": "^3.0.5"
+    "gulp-less": "^3.0.5",
+    "gulp-clean-css": "~2.0.6"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
