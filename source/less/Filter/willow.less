@@ -1,0 +1,25 @@
+/**
+ * willow
+ */
+
+@import "share";
+
+.willow(){
+  .filter-base;
+
+  filter: grayscale(.5) contrast(.95) brightness(.9);
+
+  &::before {
+    background: radial-gradient(40%, circle, rgb(212, 169, 175) 55%, black 150%);
+    mix-blend-mode: overlay;
+  }
+
+  &::after {
+    background: rgb(216, 205, 203);
+    mix-blend-mode: color;
+  }
+}
+
+.willow{
+  .willow;
+}
