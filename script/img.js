@@ -1,5 +1,5 @@
 var inputField = document.querySelector('.inputImg');
-
+var filename = document.getElementById('filename');
 function pickSample(img) {
     updateSrc(img.src);
     inputField.value = img.getAttribute('src');
@@ -15,13 +15,11 @@ function updateSrc(src) {
 function fileSelect(e) {
     e = e || window.event;
     var files = this.files;
-    var p = document.getElementById('preview');
 
     for (var i = 0, f; f = files[i]; i++) {
         var reader = new FileReader();
         reader.onload = (function(file) {
             return function(e) {
-                console.log(this.result);
                 updateSrc(this.result);
             };
         })(f);
@@ -29,7 +27,8 @@ function fileSelect(e) {
         reader.readAsDataURL(f);
     }
 }
-document.getElementById('filename').addEventListener('change', fileSelect, false);
+
+filename.addEventListener('change', fileSelect, false);
 
 document.addEventListener('click', function(event) {
     if (/demoImg/.test(event.target.className)) {
