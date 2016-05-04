@@ -1,0 +1,26 @@
+/**
+ * lark
+ */
+
+@import "share";
+
+.lark(){
+  .filter-base;
+
+  filter: contrast(.9);
+
+  &::after{
+    background: rgba(242,242,242,.8);
+    mix-blend-mode:darken;
+  }
+
+  &::before{
+    background: rgb(24,27,63);
+    mix-blend-mode:color-dodge;
+  }
+}
+
+
+.lark{
+  .lark;
+}
